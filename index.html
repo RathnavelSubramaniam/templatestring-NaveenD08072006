@@ -1,1 +1,30 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Template Literal Example</title></head><body><h2>Template Literal Example</h2><label>Name:</label><input type="text" id="name"><br><br><label>Age:</label><input type="number" id="age"><br><br><button onclick="displayMessage()">Show Message</button><h3 id="result"></h3><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <button id="display">Submit</button>
+    </form>
+    <p id="output"></p>
+    <script>
+        document.getElementById("display").onclick =(event) =>{
+            event.preventDefault();
+            const name = document.getElementById("name").Value;
+            const age = document.getElementById("age").Value;
+            const message = 'My name is ${name} and Iam ${age} years old.';
+            document.getElementById("output").innerHTML = message;
+        }
+
+    </script>
+    
+</body>
+</html>
